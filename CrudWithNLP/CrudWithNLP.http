@@ -1,0 +1,38 @@
+﻿@CrudWithNLP_HostAddress = https://localhost:7082
+
+POST {{CrudWithNLP_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name":"Item 3",
+  "isComplete":true
+}
+###
+
+GET {{CrudWithNLP_HostAddress}}/todoitems
+
+###
+
+GET {{CrudWithNLP_HostAddress}}/todoitems/1
+
+###
+
+PUT {{CrudWithNLP_HostAddress}}/todoitems/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "feed the dog again",
+  "isComplete": true
+}
+
+###
+
+
+POST {{CrudWithNLP_HostAddress}}/llm
+Content-Type: application/json
+
+{
+  "Input": "Get my ToDos"
+}
+###
