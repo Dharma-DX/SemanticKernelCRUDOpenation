@@ -4,7 +4,7 @@ POST {{CrudWithNLP_HostAddress}}/todoitems
 Content-Type: application/json
 
 {
-  "name":"Item 3",
+  "name":"Item 5",
   "isComplete":true
 }
 ###
@@ -33,6 +33,7 @@ POST {{CrudWithNLP_HostAddress}}/llm
 Content-Type: application/json
 
 {
-  "Input": "Get my ToDos"
+  "Input": "I need to remember to attend the seminar tomorrow."
 }
 ###
+

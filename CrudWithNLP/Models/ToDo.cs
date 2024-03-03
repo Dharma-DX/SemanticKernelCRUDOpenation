@@ -1,4 +1,4 @@
-﻿namespace CrudWithNLP
+﻿namespace CrudWithNLP.Models
 {
     public class ToDo
     {

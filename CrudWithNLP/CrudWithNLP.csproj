@@ -7,11 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Plugins\CreateToDoPlugin\config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Plugins\CreateToDoPlugin\skprompt.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.2" />
     <PackageReference Include="Microsoft.SemanticKernel" Version="1.4.0" />
     <PackageReference Include="Microsoft.SemanticKernel.Planners.Handlebars" Version="1.4.0-preview" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Plugins\CreateToDoPlugin\config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Plugins\CreateToDoPlugin\skprompt.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,18 @@
+﻿## INSTRUCTIONS
+- Your primary job is to read the user input which is in string format and create a ToDo Json object from it.   
+- The Output JSON format you need to use is given below as OUTPUT_FORMAT. 
+- Identify the primary task and update the Name property in the JSON. 
+- Identify if status of the task and update the IsComplete property in JSON with it. true if the task is complete, false if it's incomplete or to be done.
+- Restrict your answers only to the OUTPUT_FORMAT json format given below. No other commentary, reasoning, solutions, steps are needed.
+- Always return the outful as the OUTPUT_FORMAT json with the values filled in. 
+
+## USER_INPUT:
+{{$input}}
+
+## OUTPUT_FORMAT:
+{	
+    "Id" : "",
+	"Name": "Attend the seminar",
+	"IsComplete": false,
+	"UserAction": "CREATE"
+}

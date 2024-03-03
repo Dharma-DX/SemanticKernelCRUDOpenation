@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "description": "Create a ToDo JSON Object from by abstracting values from User Input",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 0.0,
+      "top_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "Input text from the user",
+      "default": ""
+    }
+  ]
+}
