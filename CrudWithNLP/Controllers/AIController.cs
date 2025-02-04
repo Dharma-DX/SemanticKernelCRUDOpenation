@@ -13,8 +13,7 @@ namespace CrudWithNLP.Controllers
         [HttpPost]
         public async Task<IActionResult> NLPChat(string input)
         {
-            string azureOpenAIDeploymentName = "";
-            string azureOpenAIEndpoint = "";
+   
             string azureOpenAIAPIKey = "";
             string result = ""; 
 
@@ -23,9 +22,10 @@ namespace CrudWithNLP.Controllers
             //builder.Plugins.AddFromPromptDirectory("./Plugins/CreateToDoPlugin");
             builder.Plugins.AddFromType<ToDoPlugin>();
             builder.Plugins.AddFromType<IdentifyToDoObjectPlugin>(); 
-            builder.Services.AddAzureOpenAIChatCompletion(azureOpenAIDeploymentName,
-                azureOpenAIEndpoint
-                , azureOpenAIAPIKey);
+            builder.AddOpenAIChatCompletion(
+            "gpt-4o-mini",                  // OpenAI Model name
+           azureOpenAIAPIKey);     // OpenAI API Key
+
 
             var kernel = builder.Build();
 

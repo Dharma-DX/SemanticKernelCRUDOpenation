@@ -14,6 +14,7 @@ namespace CrudWithNLP.Plugins
         [KernelFunction, Description("Get all ToDo list items")]
         public static async Task<IEnumerable<ToDo>> GetToDos() 
         {
+            Console.WriteLine($"{url}/GetAll");
             IEnumerable<ToDo> ToDos = null; 
             using (var httpClient = new HttpClient())            
             try
@@ -40,7 +41,7 @@ namespace CrudWithNLP.Plugins
             IEnumerable<ToDo> ToDos = null;
             using (var httpClient = new HttpClient())
                 try
-                {
+                {  Console.WriteLine($"{url}/GetAllCompleteStatus");
                     var response = await httpClient.GetAsync($"{url}/GetAllCompleteStatus");
                     response.EnsureSuccessStatusCode();
                     string content = await response.Content.ReadAsStringAsync();
@@ -63,7 +64,7 @@ namespace CrudWithNLP.Plugins
             var ToDo = new ToDo();
             using (var httpClient = new HttpClient())
                 try
-                {
+                {Console.WriteLine($"{url}/GetOne");
                     var response = await httpClient.GetAsync($"{url}/GetOne/{id}");
                     response.EnsureSuccessStatusCode();
                     string content = await response.Content.ReadAsStringAsync();
@@ -84,7 +85,7 @@ namespace CrudWithNLP.Plugins
         public static async Task<string> CreateNewToDo([Description("ToDo Object to create a new ToDo Task with")] ToDo _todo)
         {
             //var model = JsonConvert.DeserializeObject<ToDo>(input);
-
+           Console.WriteLine($"{url}/Create");
             string ToDos = string.Empty;
             using (var httpClient = new HttpClient())
                 try
@@ -123,7 +124,7 @@ namespace CrudWithNLP.Plugins
             var result = string.Empty;
             using (var httpClient = new HttpClient())
                 try
-                {
+                {  Console.WriteLine($"{url}/Remove");
                     var response = await httpClient.DeleteAsync($"{url}/Remove/{id}");
                     response.EnsureSuccessStatusCode();
                     string content = await response.Content.ReadAsStringAsync();
