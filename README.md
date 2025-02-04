@@ -17,7 +17,7 @@ GitHub Codespaces (optional)
 Installation
 Clone the repository:
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Dharma-DX/SemanticKernelCRUDOpenation.git
 cd your-repo-name
 Restore the dependencies:
 
